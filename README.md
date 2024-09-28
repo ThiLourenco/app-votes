@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+<a href=https://github.com/ThiLourenco/e-commerce target="_blank">
+<img src='./assets/home.png' width="100%" alt="Banner" />
+</a>
+</p>
 
-## Getting Started
+*This readme can also be read in [Brazilian Portuguese](README-pt-BR.md) or [English](README.md).*
 
-First, run the development server:
+## 📌 Project
+
+Votes application in realtime.
+
+## 🔍 Table of Contents
+
+* [💻 Stack](#stack)
+
+* [📝 Project Summary](#project-summary)
+
+* [⚙️ Setting Up](#setting-up)
+
+* [🚀 Run Locally](#run-locally)
+
+* [📄 License](#license)
+
+## 💻 Stack
+
+This project makes use of a modern and essential technology stack, including:
+
+
+- [typescript](https://www.typescriptlang.org/): A typed superset of JavaScript that compiles to plain JavaScript.
+- [zod](https://github.com/colinhacks/zod): TypeScript-first schema validation library.
+
+- [next](https://nextjs.org/): Framework for server-rendered React applications.
+- [react](https://reactjs.org/): JavaScript library for building user interfaces.
+- [react-dom](https://reactjs.org/docs/react-dom.html): Entry point to the DOM and server renderers for React.
+- [tailwindcss](https://tailwindcss.com/): A utility CSS framework that accelerates the development of user interfaces with consistent styles.
+- [prisma/client](https://www.prisma.io/docs/reference/tools-and-interfaces/prisma-client): Prisma client for database access and ORM.
+
+## ⚙️ Setting Up
+
+*.env.example*
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# environment
+NEXT_PUBLIC_POLLID=""
+SERVER="http://localhost:3333/polls"
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Create new poll
+```bash
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+POST http://localhost:3333/polls
+body:
+{
+	"title": "Votação 2024",
+	"options": ["Xuxa da silva", "Chiquinho", "Zezinho", "Janil"]
+}
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Run Locally
 
-## Learn More
+You must have the following installed on your machine to run this project:
 
-To learn more about Next.js, take a look at the following resources:
+- [Node.js](https://nodejs.org/en/): Version >= 20
+- Package Manager: ([Npm](https://www.npmjs.com/) or [pNPM](https://pnpm.io/pt/)) or others...
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1.Clone the e-commerce repository:
+```sh
+git clone https://github.com/ThiLourenco/app-votes
+```
+2.Install the dependencies with one of the package managers listed below:
+```bash
+pnpm install
+npm install
 
-## Deploy on Vercel
+```
+3.Start the development mode:
+```bash
+pnpm dev
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [**MIT License**](https://github.com/ThiLourenco/app-votes/blob/main/LICENSE) file for details.
+
