@@ -5,12 +5,11 @@ import VoteOption from "../components/VoteOption";
 import RealTimeResults from "@/components/RealTimeResults";
 
 const Home = () => {
-  const pollId = process.env.POLLID!; // Substituir com o ID real da enquete
+  const pollId = process.env.NEXT_PUBLIC_POLLID!;
   const [poll, setPoll] = useState<any>(null);
   const [selectedVote, setSelectedVote] = useState<string | null>(null);
   const [voted, setVoted] = useState<boolean>(false);
 
-  // Busca as opções da enquete
   useEffect(() => {
     const fetchPoll = async () => {
       const response = await fetch(`http://localhost:3333/polls/${pollId}`);

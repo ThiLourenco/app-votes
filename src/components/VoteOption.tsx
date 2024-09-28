@@ -13,6 +13,7 @@ const VoteOption: React.FC<VoteOptionProps> = ({ options, onVote }) => {
   const handleVote = () => {
     if (selectedOption) {
       onVote(selectedOption);
+      console.log(selectedOption)
     }
   };
 
