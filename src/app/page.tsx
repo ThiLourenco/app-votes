@@ -9,6 +9,7 @@ const Home = () => {
   const pollId = process.env.NEXT_PUBLIC_POLLID!;
   const [poll, setPoll] = useState<any>(null);
   const [selectedVote, setSelectedVote] = useState<string | null>(null);
+  const [optionTitle, setOptionTitle] = useState<string | null>(null);
   const [voted, setVoted] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
   const sessionId = getCookie('sessionId');
@@ -47,9 +48,11 @@ const Home = () => {
         return;
       }
 
-      setSelectedVote(optionId);
-      setVoted(true);
+      const data = await response.json();
 
+      setSelectedVote(optionId);
+      setOptionTitle(data.optionTitle)
+      setVoted(true);
       setError(null);
 
       setTimeout(() => {
@@ -81,7 +84,7 @@ const Home = () => {
         ) : (
           <div className="text-center">
             <h2 className="text-2xl font-bold mb-4">Voto confirmado!</h2>
-            <p className="text-lg">Você votou na opção: {selectedVote}</p>
+            <p className="text-lg">Você votou na opção: {optionTitle}</p>
             <p className="text-gray-500">Voltando à votação em 3 segundos...</p>
           </div>
         )}
