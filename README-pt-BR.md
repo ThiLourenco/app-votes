@@ -63,7 +63,7 @@ body:
 Você deve ter o seguinte instalado em sua máquina para executar este projeto:
 
 - [Node.js](https://nodejs.org/en/): Version >= 20
-- Gerenciador de pacotes: ([npm](https://www.npmjs.com/) ou [pnpm](https://pnpm.io/pt/)) ou outros...
+- Gerenciador de pacotes: ([npm](https://www.npmjs.com/) ou [pNPM](https://pnpm.io/pt/)) ou outros...
 
 
 1.Clonar o repositório:
