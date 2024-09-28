@@ -58,6 +58,30 @@ body:
 	"options": ["Xuxa da silva", "Chiquinho", "Zezinho", "Janil"]
 }
 ```
+## 🚀 Execute Localmente
+
+Você deve ter o seguinte instalado em sua máquina para executar este projeto:
+
+- [Node.js](https://nodejs.org/en/): Version >= 20
+- Gerenciador de pacotes: ([npm](https://www.npmjs.com/) ou [pnpm](https://pnpm.io/pt/)) ou outros...
+
+
+1.Clonar o repositório:
+```sh
+git clone https://github.com/ThiLourenco/app-votes
+```
+2.Instale as dependências com um dos gerenciadores de pacotes listados abaixo:
+```bash
+pnpm install
+npm install
+
+```
+3.Inicie o modo de desenvolvimento:
+```bash
+pnpm dev
+npm run dev
+
+```
 
 ## 📄 Licença
 
