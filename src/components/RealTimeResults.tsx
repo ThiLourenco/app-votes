@@ -10,7 +10,7 @@ const RealTimeResults: React.FC<RealTimeResultsProps> = ({ pollId }) => {
   const [results, setResults] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    const socket = new WebSocket(`ws://localhost:3000/api/polls/${pollId}/results`);
+    const socket = new WebSocket(`ws://localhost:3333/polls/${pollId}/results`);
 
     socket.onmessage = (event) => {
       const message = JSON.parse(event.data);

@@ -5,7 +5,7 @@ import VoteOption from "../components/VoteOption";
 import RealTimeResults from "@/components/RealTimeResults";
 
 const Home = () => {
-  const pollId = "fca98792-cc41-4a23-bc99-33c5d6526417"; // Substituir com o ID real da enquete
+  const pollId = process.env.POLLID!; // Substituir com o ID real da enquete
   const [poll, setPoll] = useState<any>(null);
   const [selectedVote, setSelectedVote] = useState<string | null>(null);
   const [voted, setVoted] = useState<boolean>(false);
@@ -24,7 +24,7 @@ const Home = () => {
   const handleVote = async (optionId: string) => {
     if (!pollId || !optionId) return;
 
-    await fetch(`/api/polls/${pollId}/votes`, {
+    await fetch(`http://localhost:3333/polls/${pollId}/votes`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
